@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KUMITE SYSTEM</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script language="javascript" src="js/mycode.js"></script>
+</head>
+
+<body>
+    <div class="">
+        <div class="body-box">
+            <div class="body-item AKA-box">
+                <div style="height: 35vh;" class="col-md-1">
+                    <div class="" style="height: 20vh; background-color: red;">
+                        <!-- <p id="senshu-aka" style="color: red; font-size: 8vh;">&#8858</p> -->
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="info-box name-box">
+                        <input id="aka-name" onchange="correctName('aka-name')" value="AKA" /><br>
+                    </div>
+
+                    <div class="penalty-box text-center">
+                        <div onclick="getPenalty('aka-C1')" id="aka-C1" class="col-md-2"></div>
+                        <div onclick="getPenalty('aka-C2')" id="aka-C2" class="col-md-2"></div>
+                        <div onclick="getPenalty('aka-C3')" id="aka-C3" class="col-md-2"></div>
+                        <div onclick="getPenalty('aka-HC')" id="aka-HC" class="col-md-2"></div>
+                        <div onclick="getPenalty('aka-H')" id="aka-H" class="col-md-2"></div>
+                    </div>
+                </div>
+
+                <div onclick="getSenshu('senshu-aka')" class="col-md-1 senshu-box">
+                    <p style="margin-top: 60%; font-size: 8vh" class="text-right" id="senshu-aka" style="color: red; font-size: 8vh">&#8858</p>
+                </div>
+                
+                <div class="score-box col-md-3">
+                    <input id="aka-score" class="score text-right" min="0" type="number" value="0" />
+                </div>
+                <!--  -->
+            </div>
+
+            <div class="body-item AO-box">
+                <div style="height: 35vh;" class="padding col-md-1">
+                    <div class="" style="height: 20vh; background-color: blue;">
+                        <!-- <p id="senshu-ao" style="color: blue; font-size: 8vh">&#8858</p> -->
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <div class="info-box name-box">
+                        <input id="ao-name" onchange="correctName('ao-name')" value="AO" /><br>
+                    </div>
+                    <div class="penalty-box text-center">
+                        <div onclick="getPenalty('ao-C1')" id="ao-C1" class="col-md-2"></div>
+                        <div onclick="getPenalty('ao-C2')" id="ao-C2" class="col-md-2"></div>
+                        <div onclick="getPenalty('ao-C3')" id="ao-C3" class="col-md-2"></div>
+                        <div onclick="getPenalty('ao-HC')" id="ao-HC" class="col-md-2"></div>
+                        <div onclick="getPenalty('ao-H')" id="ao-H" class="col-md-2"></div>
+                    </div>
+
+                </div>
+
+                <div onclick="getSenshu('senshu-ao')" class="col-md-1 senshu-box">
+                    <p style="margin-top: 60%; font-size: 8vh" class="text-right" id="senshu-ao" style="color: blue; font-size: 8vh">&#8858</p>
+                </div>
+
+                <div class="score-box col-md-3">
+                    <input id="ao-score" class="score text-right" min="0" type="number" value="0" />
+                </div>
+                <!--  -->
+            </div>
+        </div>
+
+        <div class="footer">
+
+            <div class="text-center col-md-3">
+                <div>
+                    <button onclick="redirect('index.html')" style="color: white">KATA MODE</button>
+                </div>
+                <div style="margin: 5vh">
+                    <button onclick="setTime('3:00')" class="col-md-3 text-center" value="RESET" style="color: white; width: 20%; margin-left: 5%;">3m</button>
+                    <button onclick="setTime('2:00')" class="col-md-3 text-center" value="RESET" style="color: white; width: 20%; margin-left: 5%;">2m</button>
+                    <button onclick="setTime('1:30')" class="col-md-3 text-center" value="RESET" style="color: white; width: 20%; margin-left: 5%;">90s</button>
+                    <button onclick="setTime('1:00')" class="col-md-3 text-center" value="RESET" style="color: white; width: 20%; margin-left: 5%;">1m</button>
+                </div>
+            </div>
+
+            <!-- <div class="time-box" class="col-md-4"> -->
+            <input type="text" id="minute" style="width: 10%;" class="col-md-2" value="3" />
+            <input readonly style="width: 5%" class="text-center col-md-1" value=":" />
+            <input type="text" id="second" style="width: 20%;" class="col-md-2" value="00" />
+            <!-- </div> -->
+            <div class="text-center col-md-3">
+                <button class="col-md-2" onclick="pressStartButton()" id="start-button" style="color: white">START
+                </button>
+
+                <button class="col-md-2" onclick="reload()" style="color: white; margin-left: 20%;">RESET</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
